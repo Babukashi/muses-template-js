@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!username) {
     window.alert('ログインしてください');
     location.href = 'login.html';
-  }
+  } //4.23開始
   document.querySelector('#user_name span').textContent = username;
 
   const res = await fetch('data.json');
