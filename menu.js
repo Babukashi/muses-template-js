@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.alert('ログインしてください');  //名前がないとアラートが出る
     location.href = 'login.html';  //login.htmlにページ遷移する
   } //4.23開始
-  document.querySelector('#user_name span').textContent = username;
+  document.querySelector('#user_name span').textContent = username; //入力したユーザーネームが表示されるようになる
 
   const res = await fetch('data.json');  //data.jsonからデータを取得
   const obj = await res.json();
@@ -46,5 +46,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       record.appendChild(el);
     }
     info_list.appendChild(record);
-  }
+  } //Musesの連絡を表示
 });
