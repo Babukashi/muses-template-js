@@ -1,14 +1,14 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const username = sessionStorage.username;
+  const username = sessionStorage.username;                        //ログイン
   if (!username) {
-    window.alert('ログインしてください');//4.30
-    location.href = 'login.html';
+    window.alert('ログインしてください');  //名前がないとアラートが出る
+    location.href = 'login.html';  //login.htmlにページ遷移する
   } //4.23開始
   document.querySelector('#user_name span').textContent = username;
 
-  const res = await fetch('data.json');
+  const res = await fetch('data.json');  //data.jsonからデータを取得
   const obj = await res.json();
   const data = obj.list;
   console.log(data);
