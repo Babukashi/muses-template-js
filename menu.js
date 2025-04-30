@@ -1,14 +1,14 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const username = sessionStorage.username;                        //ログイン
+  const username = sessionStorage.username; //ログイン
   if (!username) {
-    window.alert('ログインしてください');  //名前がないとアラートが出る
-    location.href = 'login.html';  //login.htmlにページ遷移する
+    window.alert('ログインしてください'); //名前がないとアラートが出る
+    location.href = 'login.html'; //login.htmlにページ遷移する
   } //4.23開始
   document.querySelector('#user_name span').textContent = username; //入力したユーザーネームが表示されるようになる
 
-  const res = await fetch('data.json');  //data.jsonからデータを取得
+  const res = await fetch('data.json'); //data.jsonからデータを取得
   const obj = await res.json();
   const data = obj.list;
   console.log(data);
@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       const el = document.createElement('div');
       if (prop == 'from') {
         //連絡の出所
-        el.innerHTML = val;
+        el.innerHTML = val; //el(div)の中身をvalに変更
       } else {
-        el.textContent = val;
+        el.textContent = val; //テキストも一緒にvalに変更
       }
       el.className = prop;
 
       if (prop == 'subject') {
         //連絡の題名
         const tri = document.createElement('div');
-        tri.textContent = '&nbsp;';
+        tri.textContent = '&nbsp;'; //改行を防ぐためのもの(赤丸と題名が横並びになってくれるように使われている)
         tri.className = 'tri';
         record.appendChild(tri);
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         mark.className = 'mark';
         const span = document.createElement('span');
         span.textContent = '!';
-        span.className = 'exmark';
+        span.className = 'exmark'; //題名の前のビックリマーク
         mark.appendChild(span);
         record.appendChild(mark);
       }
