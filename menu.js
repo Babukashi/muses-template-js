@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const username = sessionStorage.username;
   if (!username) {
-    window.alert('ログインしてください');//4.30
+    window.alert('ログインしてください'); //4.30
     location.href = 'login.html';
   } //4.23開始
   document.querySelector('#user_name span').textContent = username; //入力したユーザーネームが表示されるようになる
@@ -46,5 +46,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       record.appendChild(el);
     }
     info_list.appendChild(record);
-  }
+  } //Musesの連絡を表示
 });
