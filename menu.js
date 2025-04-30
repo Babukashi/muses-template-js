@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const [prop, val] of Object.entries(item)) {
       const el = document.createElement('div');
       if (prop == 'from') {
+        //連絡の出所
         el.innerHTML = val;
       } else {
         el.textContent = val;
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       el.className = prop;
 
       if (prop == 'subject') {
+        //連絡の題名
         const tri = document.createElement('div');
         tri.textContent = '&nbsp;';
         tri.className = 'tri';
