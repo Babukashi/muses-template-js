@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const data = obj.list;
   console.log(data);
 
-  document.querySelectorAll('span.unread').forEach((el) => (el.textContent = data.length));
+  document.querySelectorAll('span.unread').forEach((el) => (el.textContent = data.length)); //未読の件数を格納
 
   const info_list = document.querySelector('div#info_list');
 
