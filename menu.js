@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.alert('ログインしてください');
     location.href = 'login.html';
   } //4.23開始
-  document.querySelector('#user_name span').textContent = username;
+  document.querySelector('#user_name span').textContent = username; //入力したユーザーネームが表示されるようになる
 
   const res = await fetch('data.json');
   const obj = await res.json();
