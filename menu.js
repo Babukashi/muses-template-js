@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const el = document.createElement('div');
       if (prop == 'from') {
         //連絡の出所
-        el.innerHTML = val; //el(div)の中身をvalに変更
+        el.innerHTML = val; //改行の<br>が文字列として出力されないようにするため
       } else {
-        el.textContent = val; //テキストも一緒にvalに変更
+        el.textContent = val; //from以外のkeyは文字列
       }
       el.className = prop;
 
