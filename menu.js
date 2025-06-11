@@ -23,6 +23,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const [prop, val] of Object.entries(item)) {
       //propにキー、valに値が入る
       const el = document.createElement('div');
+      if (prop == 'date') {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+      el.className = prop;
+
       if (prop == 'from') {
         //連絡の出所
         el.innerHTML = val; //改行の<br>が文字列として出力されないようにするため
@@ -38,16 +45,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         tri.className = 'tri';
         record.appendChild(tri);
 
-        const mark = document.createElement('div');
-        mark.className = 'mark';
-        const span = document.createElement('span');
-        span.textContent = '!';
-        span.className = 'exmark'; //題名の前のビックリマーク
-        mark.appendChild(span);
-        record.appendChild(mark);
+        //const mark = document.createElement('div');
+        //mark.className = 'mark';
+        //const span = document.createElement('span');
+        //span.textContent = '!';
+        //span.className = 'exmark'; //題名の前のビックリマーク
+        //mark.appendChild(span);
+        //record.appendChild(mark);
       }
-      record.appendChild(el);
+      //record.appendChild(el);
     }
-    info_list.appendChild(record);
+    //info_list.appendChild(record);
   } //Musesの連絡を表示
 });
