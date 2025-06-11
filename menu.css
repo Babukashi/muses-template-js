@@ -52,7 +52,7 @@ main#info {
 }
 
 .record {
-  display: grid;
+  display: flex;
   grid-template-columns: 2rem 1fr 1fr 1fr 1rem;
   grid-template-rows: 1fr 1fr;
   align-items: center;
