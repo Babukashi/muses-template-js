@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   for (const item of data) {
     const record = document.createElement('div');
     record.className = 'record';
-    for (const [prop, val] of Object.entries(item)) {   //propにキー、valに値が入る
+    for (const [prop, val] of Object.entries(item)) {
+      //propにキー、valに値が入る
       const el = document.createElement('div');
       if (prop == 'from') {
         //連絡の出所
