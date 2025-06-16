@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>検索フォーム</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🔍 検索</h2>
+
+      <form id="searchForm">
+        <label
+          >表題<br />
+          <input type="text" name="title" placeholder="※部分一致可" />
+        </label>
+
+        <label
+          >重要度<br />
+          <select name="importance">
+            <option>指定しない</option>
+            <option>高</option>
+            <option>中</option>
+            <option>低</option>
+          </select>
+        </label>
+
+        <label
+          >発信部署等名<br />
+          <input type="text" name="department" placeholder="※部分一致可" />
+        </label>
+
+        <label
+          >ジャンル<br />
+          <select name="genre">
+            <option>指定しない</option>
+            <option>お知らせ</option>
+            <option>注意</option>
+            <option>更新</option>
+          </select>
+        </label>
+
+        <label
+          >掲示期間<br />
+          <input type="date" name="display_start" /> から <input type="date" name="display_end" /> まで
+        </label>
+
+        <label
+          >更新日<br />
+          <input type="date" name="update_start" /> から <input type="date" name="update_end" /> まで
+        </label>
+
+        <label
+          >既読<br />
+          <input type="radio" name="read" value="show" checked /> 表示する
+          <input type="radio" name="read" value="hide" /> 表示しない
+        </label>
+
+        <div class="buttons">
+          <button type="submit" class="search-btn">検索</button>
+          <button type="reset" class="clear-btn">クリア</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
