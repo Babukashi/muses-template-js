@@ -128,53 +128,46 @@ header p:last-child {
 main#top {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.75rem;
   gap: 1rem 0.4rem;
-  color: #44077d;
   margin-bottom: 2rem;
   margin-left: 0.5rem;
 }
 
-:is(#upper_menu, main#top) a {
+:is(#upper_menu,main#top) a {
   color: #44077d;
   text-decoration: none;
   display: block;
 }
 
+main#top a{
+  color:black;
+}
+
 main#top div {
-  width: 5rem;
   width: 27%;
+  height: 4rem;
   text-align: center;
   padding: 0.5rem;
+  line-height: 4rem;
+  font-size: 1rem;
 }
 
 main#top div:nth-child(1) {
-  background-color: #f4bab8;
+  background-color: #ffadad;
 }
 
 main#top div:nth-child(2) {
-  background-color: #f9dcbc;
+  background-color: #89c3eb;
 }
 
 main#top div:nth-child(3) {
   font-size: 0.6rem;
-  background-color: #f3bada;
+  background-color: #cc7eb1;
+  font-size: 1rem;
 }
 
 main#top div:nth-child(4) {
-  background-color: #b55c92;
-}
-
-main#top div:nth-child(5) {
-  background-color: #bddafa;
-}
-
-main#top div:nth-child(6) {
-  background-color: #c6fddd;
-}
-
-main#top div:nth-child(7) {
-  background-color: #e1febe;
+  background-color: #fddea5;
 }
 
 footer p {
