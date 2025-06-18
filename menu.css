@@ -41,7 +41,7 @@ main#info {
 }
 
 #info_list {
-  display: flex;
+  display: flexbox;
   margin: 0.5rem 0.5rem 1rem;
 }
 
@@ -111,6 +111,8 @@ main#info {
   border: solid 0.2rem #5a9674;
   border-radius: 0.7rem;
   padding: 0.5rem;
+  text-decoration: none;
+  color: black;
 }
 
 #info_footer span {
