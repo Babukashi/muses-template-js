@@ -42,13 +42,13 @@
       <h2>🔍 検索</h2>
 
       <form id="searchForm">
-        <label
-          >表題<br />
+        <label>
+          <span>表題</span>
           <input type="text" name="title" placeholder="※部分一致可" />
         </label>
 
-        <label
-          >重要度<br />
+        <label>
+          <span>重要度</span><br />
           <select name="importance">
             <option>指示しない</option>
             <option>★緊急重要★</option>
@@ -57,13 +57,13 @@
           </select>
         </label>
 
-        <label
-          >発信部署等名<br />
+        <label>
+          <span>発信部署等名</span><br />
           <input type="text" name="department" placeholder="※部分一致可" />
         </label>
 
-        <label
-          >ジャンル<br />
+        <label>
+          <span>ジャンル</span><br />
           <select name="genre">
             <option>指示しない</option>
             <option>連絡事項</option>
@@ -76,18 +76,18 @@
           </select>
         </label>
 
-        <label
-          >掲示期間<br />
+        <label>
+          <span>掲示期間</span><br />
           <input type="date" name="display_start" /> から <input type="date" name="display_end" /> まで
         </label>
 
-        <label
-          >更新日<br />
+        <label>
+          <span>更新日</span><br />
           <input type="date" name="update_start" /> から <input type="date" name="update_end" /> まで
         </label>
 
-        <label
-          >既読<br />
+        <label>
+          <span>既読</span><br />
           <input type="radio" name="read" value="show" checked /> 表示する
           <input type="radio" name="read" value="hide" /> 表示しない
         </label>

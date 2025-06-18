@@ -146,12 +146,16 @@ h2 {
   background-color: #5a8b60;
   color: white;
   padding: 10px;
-  border-radius: 5px;
 }
 
 label {
-  display: block;
+  display: flex;
   margin: 15px 0;
+}
+
+label span{
+  background-color: #9be179;
+  margin-right: 0.5rem;
 }
 
 input[type='text'],
@@ -176,6 +180,7 @@ select {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
+  border: solid 0.2rem #5a9674;
 }
 
 .clear-btn {
@@ -185,6 +190,7 @@ select {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
+  border: solid 0.2rem #0066ff;
 }
 
 footer p {
