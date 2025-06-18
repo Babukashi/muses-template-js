@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const el2 = document.createElement('div');
       if (prop == 'from') {
         //連絡の出所
-        el2.innerHTML = val; //改行の<br>が文字列として出力されないようにするため
+        el2.innerHTML = val; //改行のが文字列として出力されないようにするため
       } else {
         el2.textContent = val; //from以外のkeyは文字列
       }
@@ -56,8 +56,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         tri.className = 'tri';
         record.appendChild(tri);
       }
+
       record.appendChild(el2);
     }
+
     info_list.appendChild(record);
   } //Musesの連絡を表示
 });
