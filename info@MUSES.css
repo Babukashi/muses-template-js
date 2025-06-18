@@ -128,7 +128,6 @@ header p:last-child {
 main#top {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.75rem;
   gap: 1rem 0.4rem;
   margin-bottom: 2rem;
   margin-left: 0.5rem;
@@ -145,10 +144,12 @@ main#top a{
 }
 
 main#top div {
-  width: 5rem;
   width: 27%;
+  height: 4rem;
   text-align: center;
   padding: 0.5rem;
+  line-height: 4rem;
+  font-size: 1rem;
 }
 
 main#top div:nth-child(1) {
@@ -162,6 +163,7 @@ main#top div:nth-child(2) {
 main#top div:nth-child(3) {
   font-size: 0.6rem;
   background-color: #cc7eb1;
+  font-size: 1rem;
 }
 
 main#top div:nth-child(4) {
