@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   for (const item of data) {
     const record = document.createElement('div');
     record.className = 'record';
+
+    const mark = document.createElement('div');
+    mark.className = 'mark';
+    const span = document.createElement('span');
+    span.textContent = '!';
+    span.className = 'exmark'; //題名の前のビックリマーク
+    mark.appendChild(span);
+    record.appendChild(mark);
+
     for (const [prop, val] of Object.entries(item)) {
       //propにキー、valに値が入る
 
@@ -47,15 +56,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         tri.className = 'tri';
         record.appendChild(tri);
       }
-
-      const mark = document.createElement('div');
-      mark.className = 'mark';
-      const span = document.createElement('span');
-      span.textContent = '!';
-      span.className = 'exmark'; //題名の前のビックリマーク
-      mark.appendChild(span);
-      mark.appendChild(el1);
-
       record.appendChild(el2);
     }
     info_list.appendChild(record);
