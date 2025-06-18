@@ -20,41 +20,46 @@ document.addEventListener('DOMContentLoaded', async () => {
   for (const item of data) {
     const record = document.createElement('div');
     record.className = 'record';
+
+    const mark = document.createElement('div');
+    mark.className = 'mark';
+    const span = document.createElement('span');
+    span.textContent = '!';
+    span.className = 'exmark'; //題名の前のビックリマーク
+    mark.appendChild(span);
+    record.appendChild(mark);
+
     for (const [prop, val] of Object.entries(item)) {
       //propにキー、valに値が入る
-      const el = document.createElement('div');
-      if (prop == 'date') {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
-      el.className = prop;
 
+      const el1 = document.createElement('div');
+      if (prop == 'date') {
+        //日付
+        el1.innerHTML = val;
+      } else {
+        el1.textContent = val;
+      }
+      el1.className = prop;
+
+      const el2 = document.createElement('div');
       if (prop == 'from') {
         //連絡の出所
-        el.innerHTML = val; //改行の<br>が文字列として出力されないようにするため
+        el2.innerHTML = val; //改行のが文字列として出力されないようにするため
       } else {
-        el.textContent = val; //from以外のkeyは文字列
+        el2.textContent = val; //from以外のkeyは文字列
       }
-      el.className = prop;
+      el2.className = prop;
 
       if (prop == 'subject') {
         //連絡の題名
         const tri = document.createElement('div');
-        tri.textContent = '&nbsp;'; //改行を防ぐためのもの(赤丸と題名が横並びになってくれるように使われている)
         tri.className = 'tri';
         record.appendChild(tri);
-
-        //const mark = document.createElement('div');
-        //mark.className = 'mark';
-        //const span = document.createElement('span');
-        //span.textContent = '!';
-        //span.className = 'exmark'; //題名の前のビックリマーク
-        //mark.appendChild(span);
-        //record.appendChild(mark);
       }
-      //record.appendChild(el);
+
+      record.appendChild(el2);
     }
-    //info_list.appendChild(record);
+
+    info_list.appendChild(record);
   } //Musesの連絡を表示
 });

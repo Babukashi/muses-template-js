@@ -41,7 +41,7 @@ main#info {
 }
 
 #info_list {
-  display: flex;
+  display: flexbox;
   margin: 0.5rem 0.5rem 1rem;
 }
 
@@ -118,4 +118,9 @@ main#info {
   border-radius: 50%;
   color: #33485e;
   margin-left: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
