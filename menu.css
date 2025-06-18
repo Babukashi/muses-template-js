@@ -111,8 +111,6 @@ main#info {
   border: solid 0.2rem #5a9674;
   border-radius: 0.7rem;
   padding: 0.5rem;
-  text-decoration: none;
-  color: black;
 }
 
 #info_footer span {
@@ -120,4 +118,9 @@ main#info {
   border-radius: 50%;
   color: #33485e;
   margin-left: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
