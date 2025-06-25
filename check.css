@@ -169,6 +169,11 @@ label:nth-of-type(-n+4){
   flex-direction: column;
 }
 
+.line{
+   display: flex;
+  align-items: center;
+}
+
 input[type='text'],
 input[type='date'],
 select {
