@@ -146,6 +146,7 @@ h2 {
   background-color: #5a8b60;
   color: white;
   padding: 10px;
+  font-size: 14px;
 }
 
 label {
@@ -156,6 +157,7 @@ label {
 label span{
   background-color: #9be179;
   margin-right: 0.5rem;
+  writing-mode: vertical-rl;
 }
 
 input[type='text'],
