@@ -25,33 +25,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     mark.className = 'mark';
     const span = document.createElement('span');
     span.textContent = '!';
-    span.className = 'exmark'; //題名の前のビックリマーク
+    span.className = 'exmark';
     mark.appendChild(span);
     record.appendChild(mark);
 
+    let impEl = null;
+    let subjectEl = null;
+
     for (const [prop, val] of Object.entries(item)) {
-      //propにキー、valに値が入る
-
-      const el = document.createElement('div');
-      if (prop == 'date' || prop == 'from') {
-        //連絡の出所
-        el.innerHTML = val; //改行のが文字列として出力されないようにするため
-      } else {
-        el.textContent = val; //from以外のkeyは文字列
-        //console.log('aaa', prop, val);
+      if (prop === 'imp') {
+        impEl = document.createElement('div');
+        impEl.className = 'imp';
+        impEl.textContent = val;
+        continue;
       }
-      el.className = prop;
 
-      if (prop == 'subject') {
-        //連絡の題名
+      if (prop === 'subject') {
+        subjectEl = document.createElement('div');
+        subjectEl.className = 'subject';
+        subjectEl.textContent = val;
+
         const tri = document.createElement('div');
         tri.className = 'tri';
         record.appendChild(tri);
+        continue;
       }
 
+      const el = document.createElement('div');
+      el.className = prop;
+      el.innerHTML = prop === 'date' || prop === 'from' ? val : val;
       record.appendChild(el);
     }
 
+    // impとsubjectを縦に並べる subject-block にまとめる
+    if (impEl || subjectEl) {
+      const subjectBlock = document.createElement('div');
+      subjectBlock.className = 'subject-block';
+      if (impEl) subjectBlock.appendChild(impEl);
+      if (subjectEl) subjectBlock.appendChild(subjectEl);
+      record.appendChild(subjectBlock);
+    }
+
     info_list.appendChild(record);
-  } //Musesの連絡を表示
+  }
 });
