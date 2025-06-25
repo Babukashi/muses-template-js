@@ -146,6 +146,7 @@ h2 {
   background-color: #5a8b60;
   color: white;
   padding: 10px;
+  font-size: 14px;
 }
 
 label {
@@ -153,15 +154,26 @@ label {
   margin: 15px 0;
 }
 
-label span{
+label:nth-of-type(-n+4){
+  align-items: center;
+}
+
+#name{
   background-color: #9be179;
   margin-right: 0.5rem;
+  writing-mode: vertical-rl;
+}
+
+#da{
+  display: flex; 
+  flex-direction: column;
 }
 
 input[type='text'],
 input[type='date'],
 select {
   width: 100%;
+  height: 30px;
   padding: 5px;
   margin-top: 5px;
   box-sizing: border-box;

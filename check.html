@@ -39,16 +39,16 @@
     </header>
 
     <div class="container">
-      <h2>🔍 検索</h2>
+      <h2>🔍 info@MUSES参照＜情報検索＞</h2>
 
       <form id="searchForm">
         <label>
-          <span>表題</span>
+          <span id="name">表題</span>
           <input type="text" name="title" placeholder="※部分一致可" />
         </label>
 
         <label>
-          <span>重要度</span><br />
+          <span id="name">重要度</span><br />
           <select name="importance">
             <option>指示しない</option>
             <option>★緊急重要★</option>
@@ -58,12 +58,12 @@
         </label>
 
         <label>
-          <span>発信部署等名</span><br />
+          <span id="name">発信部署等名</span><br />
           <input type="text" name="department" placeholder="※部分一致可" />
         </label>
 
         <label>
-          <span>ジャンル</span><br />
+          <span id="name">ジャンル</span><br />
           <select name="genre">
             <option>指示しない</option>
             <option>連絡事項</option>
@@ -77,17 +77,21 @@
         </label>
 
         <label>
-          <span>掲示期間</span><br />
-          <input type="date" name="display_start" /> から <input type="date" name="display_end" /> まで
+          <span id="name">掲示期間</span><br />
+          <span id="da">
+            <input type="date" name="display_start" /> から <input type="date" name="display_end" /> まで
+          </span>
         </label>
 
         <label>
-          <span>更新日</span><br />
-          <input type="date" name="update_start" /> から <input type="date" name="update_end" /> まで
+          <span id="name">更新日</span><br />
+          <span id="da">
+            <input type="date" name="update_start" /> から <input type="date" name="update_end" /> まで
+          </span>
         </label>
 
         <label>
-          <span>既読</span><br />
+          <span id="name">既読</span><br />
           <input type="radio" name="read" value="show" checked /> 表示する
           <input type="radio" name="read" value="hide" /> 表示しない
         </label>
@@ -97,6 +101,7 @@
           <button type="reset" class="clear-btn">クリア</button>
         </div>
       </form>
+      <h2>🔍 info@MUSES参照＜情報検索＞</h2>
     </div>
 
     <footer>
