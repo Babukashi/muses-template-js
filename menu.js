@@ -32,23 +32,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     for (const [prop, val] of Object.entries(item)) {
       //propにキー、valに値が入る
 
-      const el1 = document.createElement('div');
-      if (prop == 'date') {
-        //日付
-        el1.innerHTML = val;
-      } else {
-        el1.textContent = val;
-      }
-      el1.className = prop;
-
-      const el2 = document.createElement('div');
-      if (prop == 'from') {
+      const el = document.createElement('div');
+      if (prop == 'date' || prop == 'from') {
         //連絡の出所
-        el2.innerHTML = val; //改行のが文字列として出力されないようにするため
+        el.innerHTML = val; //改行のが文字列として出力されないようにするため
       } else {
-        el2.textContent = val; //from以外のkeyは文字列
+        el.textContent = val; //from以外のkeyは文字列
+        //console.log('aaa', prop, val);
       }
-      el2.className = prop;
+      el.className = prop;
 
       if (prop == 'subject') {
         //連絡の題名
@@ -57,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         record.appendChild(tri);
       }
 
-      record.appendChild(el2);
+      record.appendChild(el);
     }
 
     info_list.appendChild(record);
