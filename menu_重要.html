@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>info@MUSESトップ</title>
-    <link href="info@MUSES.css" rel="stylesheet" />
+    <title>MUSESメニュー</title>
+    <link href="index.css" rel="stylesheet" />
+    <link href="menu.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -33,27 +34,37 @@
         <div id="news_num"><img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span>件 あります！</div>
       </div>
       <div id="link">
-        <div>HOME &gt;</div>
+        <div><a href="index.html">HOME &gt;</a></div>
         <div>info@MUSES &gt;</div>
       </div>
       <p>登録されていません</p>
     </header>
 
-    <main id="top">
-      <div>
-        <a href="menu.html">参照</a>
+    <main id="info">
+      <div id="info_header"><img src="img/loupe.gif" />参照</div>
+      <div id="info_link">
+        <div id="caution">
+          ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
+        </div>
+        <div id="unread_num"><span class="exmark">!</span>：未読(<span class="unread"></span>件)</div>
+        <div id="info_list">
+          <!-- ここにはJavaScriptからデータを入力する -->
+        </div>
       </div>
-      <div><a href="menu_重要.html">重要</a></div>
-      <div><a href="menu.html">既読</a></div>
-      <div><a href="check.html">検索</a></div>
+      <div id="control">
+        <div class="info_btn"><a href="check.html">検索</a></div>
+      </div>
+      <div id="info_footer"><img src="img/loupe.gif" />参照</div>
     </main>
 
     <footer>
       <div id="link">
-        <div>HOME &gt;</div>
+        <div><a href="index.html">HOME &gt;</a></div>
       </div>
       <p>Information</p>
       <div id="information"></div>
     </footer>
+
+    <script src="menu_重要.js"></script>
   </body>
 </html>
